@@ -133,3 +133,26 @@ const productos = [
   document.getElementById('btn-contact').addEventListener('click', () => {
     window.open('https://wa.me/1234567890?text=Hola,%20quiero%20más%20info%20de%20sus%20productos', '_blank');
   });
+
+  document.getElementById("miFormulario").addEventListener("submit", async function(e) {
+    e.preventDefault();
+
+    const nombre = document.getElementById("nombre").value;
+    const email = document.getElementById("email").value;
+
+    try {
+        const respuesta = await fetch("http://localhost:3000/form", {
+            method: "POST",
+            headers: { "Content-Type": "application/json" },
+            body: JSON.stringify({ nombre, email })
+        });
+
+        const datos = await respuesta.json();
+        console.log("Respuesta del servidor:", datos);
+        alert("Datos enviados correctamente ✅");
+
+    } catch (error) {
+        console.error("Error al enviar los datos:", error);
+        alert("Hubo un problema al enviar los datos ❌");
+    }
+});

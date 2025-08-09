@@ -1,12 +1,25 @@
 {
-    "name": "mi-proyecto",
-    "version": "1.0.0",
-    "description": "Mi página HTML servida con Node.js y Express",
-    "main": "server.js",
-    "scripts": {
-      "start": "node server.js"
-    },
-    "dependencies": {
-      "express": "^4.18.2"
-    }
+  "name": "prueba-tecnica",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+ 
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rasford12/Kryptonix-Solutions2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rasford12/Kryptonix-Solutions2/issues"
+  },
+  "homepage": "https://github.com/Rasford12/Kryptonix-Solutions2#readme",
+  "description": "",
+  "dependencies": {
+    "express": "^5.1.0"
   }
+}
