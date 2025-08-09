@@ -1,6 +1,25 @@
 {
+  "name": "prueba-tecnica",
+  "version": "1.0.0",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+ 
+
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Rasford12/Kryptonix-Solutions2.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Rasford12/Kryptonix-Solutions2/issues"
+  },
+  "homepage": "https://github.com/Rasford12/Kryptonix-Solutions2#readme",
+  "description": "",
   "dependencies": {
-    "cors": "^2.8.5",
     "express": "^5.1.0"
   }
 }
