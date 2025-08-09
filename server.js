@@ -1,20 +1,21 @@
-// Importar dependencias
 const express = require("express");
-const cors = require("cors");
+const path = require("path");
 
 const app = express();
-const PORT = 3000; // Puedes cambiarlo si quieres
 
-// Middleware
-app.use(cors());
+// Middleware para parsear JSON
 app.use(express.json());
 
+// Servir archivos estáticos de la carpeta "public" (front-end)
+app.use(express.static(path.join(__dirname, "public")));
+
 // Ruta de prueba
-app.get("/", (req, res) => {
-  res.send("Servidor funcionando correctamente 🚀");
+app.get("/api", (req, res) => {
+  res.json({ message: "Servidor funcionando correctamente 🚀" });
 });
 
-// Iniciar servidor
+// Configurar puerto (Render lo asigna en process.env.PORT)
+const PORT = process.env.PORT || 3000;
 app.listen(PORT, () => {
-  console.log(`Servidor escuchando en http://localhost:${PORT}`);
+  console.log(`Servidor corriendo en el puerto ${PORT}`);
 });
