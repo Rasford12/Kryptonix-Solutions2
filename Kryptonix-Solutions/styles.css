@@ -1,9 +1,0 @@
-@keyframes fadeInUp {
-    from {opacity: 0; transform: translateY(20px);}
-    to {opacity: 1; transform: translateY(0);}
-  }
-  .fadeInUp {animation: fadeInUp 0.8s ease forwards;}
-  button:hover {transform: translateY(-3px); box-shadow: 0 10px 15px rgba(219, 39, 119, 0.6);}
-  html {
-    scroll-behavior: smooth;
-  }

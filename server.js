@@ -1,21 +1,22 @@
-const express = require("express");
-const path = require("path");
+const express = require('express');
+const path = require('path');
+const cors = require('cors');
 
 const app = express();
+const PORT = process.env.PORT || 3000;
 
-// Middleware para parsear JSON
+app.use(cors());
 app.use(express.json());
 
-// Servir archivos estáticos de la carpeta "public" (front-end)
-app.use(express.static(path.join(__dirname, "public")));
+// Servir archivos estáticos del front-end
+app.use(express.static(path.join(__dirname, 'public')));
 
-// Ruta de prueba
-app.get("/api", (req, res) => {
-  res.json({ message: "Servidor funcionando correctamente 🚀" });
+// Ruta de ejemplo API
+app.get('/api', (req, res) => {
+  res.json({ mensaje: 'Servidor funcionando en Render 🚀' });
 });
 
-// Configurar puerto (Render lo asigna en process.env.PORT)
-const PORT = process.env.PORT || 3000;
+// Arrancar servidor
 app.listen(PORT, () => {
-  console.log(`Servidor corriendo en el puerto ${PORT}`);
+  console.log(`Servidor corriendo en puerto ${PORT}`);
 });
